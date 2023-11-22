@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\luize\\OneDrive\\Documents\\Visual Studio 2022\\SistemaEstetica2\\SistemaEstetica.csproj": {}
+    "C:\\Users\\luize\\OneDrive\\Documents\\Visual Studio 2022\\SistemaEstetica\\SistemaEstetica.csproj": {}
   },
   "projects": {
-    "C:\\Users\\luize\\OneDrive\\Documents\\Visual Studio 2022\\SistemaEstetica2\\SistemaEstetica.csproj": {
+    "C:\\Users\\luize\\OneDrive\\Documents\\Visual Studio 2022\\SistemaEstetica\\SistemaEstetica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luize\\OneDrive\\Documents\\Visual Studio 2022\\SistemaEstetica2\\SistemaEstetica.csproj",
+        "projectUniqueName": "C:\\Users\\luize\\OneDrive\\Documents\\Visual Studio 2022\\SistemaEstetica\\SistemaEstetica.csproj",
         "projectName": "SistemaEstetica",
-        "projectPath": "C:\\Users\\luize\\OneDrive\\Documents\\Visual Studio 2022\\SistemaEstetica2\\SistemaEstetica.csproj",
+        "projectPath": "C:\\Users\\luize\\OneDrive\\Documents\\Visual Studio 2022\\SistemaEstetica\\SistemaEstetica.csproj",
         "packagesPath": "C:\\Users\\luize\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\luize\\OneDrive\\Documents\\Visual Studio 2022\\SistemaEstetica2\\obj\\",
+        "outputPath": "C:\\Users\\luize\\OneDrive\\Documents\\Visual Studio 2022\\SistemaEstetica\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\luize\\AppData\\Roaming\\NuGet\\NuGet.Config",

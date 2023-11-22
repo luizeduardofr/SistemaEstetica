@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nQd5E2bjoLKLnyxl8RBZ1k0kzDsW+PpupXqtdv2TLcs1lkA7+YovCBzinXM55rJLj5exEHLSeQGoPPbk+FfJ6g==",
+  "dgSpecHash": "qbP2VfTuskg2K1Nmcw5XY5TLkMEtGJte9DT2V+dEz5Hw3r9Ed4Jruwaowh6dhmXTi87TrtwzQRm4rkPAETEntA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\luize\\OneDrive\\Documents\\Visual Studio 2022\\SistemaEstetica2\\SistemaEstetica.csproj",
+  "projectFilePath": "C:\\Users\\luize\\OneDrive\\Documents\\Visual Studio 2022\\SistemaEstetica\\SistemaEstetica.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\luize\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\luize\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
