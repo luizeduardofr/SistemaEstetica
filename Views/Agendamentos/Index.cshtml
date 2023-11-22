@@ -1,0 +1,53 @@
+﻿@model IEnumerable<SistemaEstetica2.Models.Agendamento>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.dataDisponivel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.funcionario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.servico)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.dataDisponivel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.funcionario.cpf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cliente.cpf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.servico.descricao)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

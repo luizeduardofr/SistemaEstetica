@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\SistemaEstetica2.props" />
+</Project>
