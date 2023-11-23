@@ -49,8 +49,8 @@ namespace SistemaEstetica.Controllers
         // GET: Agendamentos/Create
         public IActionResult Create()
         {
-            ViewData["clienteID"] = new SelectList(_context.Clientes, "id", "cpf");
-            ViewData["funcionarioID"] = new SelectList(_context.Funcionarios, "id", "cpf");
+            ViewData["clienteID"] = new SelectList(_context.Clientes, "id", "nome");
+            ViewData["funcionarioID"] = new SelectList(_context.Funcionarios, "id", "nome");
             ViewData["servicoID"] = new SelectList(_context.Servicos, "id", "descricao");
             return View();
         }
@@ -64,12 +64,16 @@ namespace SistemaEstetica.Controllers
         {
             if (ModelState.IsValid)
             {
+                //Movimentar a qtde de Horarios disponiveis diminuindo em 1
+                Funcionario funcionario = await _context.Funcionarios.FindAsync(agendamento.funcionarioID);
+                funcionario.vagas = funcionario.vagas - 1;
+
                 _context.Add(agendamento);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["clienteID"] = new SelectList(_context.Clientes, "id", "cpf", agendamento.clienteID);
-            ViewData["funcionarioID"] = new SelectList(_context.Funcionarios, "id", "cpf", agendamento.funcionarioID);
+            ViewData["clienteID"] = new SelectList(_context.Clientes, "id", "nome", agendamento.clienteID);
+            ViewData["funcionarioID"] = new SelectList(_context.Funcionarios, "id", "nome", agendamento.funcionarioID);
             ViewData["servicoID"] = new SelectList(_context.Servicos, "id", "descricao", agendamento.servicoID);
             return View(agendamento);
         }
@@ -87,8 +91,8 @@ namespace SistemaEstetica.Controllers
             {
                 return NotFound();
             }
-            ViewData["clienteID"] = new SelectList(_context.Clientes, "id", "cpf", agendamento.clienteID);
-            ViewData["funcionarioID"] = new SelectList(_context.Funcionarios, "id", "cpf", agendamento.funcionarioID);
+            ViewData["clienteID"] = new SelectList(_context.Clientes, "id", "nome", agendamento.clienteID);
+            ViewData["funcionarioID"] = new SelectList(_context.Funcionarios, "id", "nome", agendamento.funcionarioID);
             ViewData["servicoID"] = new SelectList(_context.Servicos, "id", "descricao", agendamento.servicoID);
             return View(agendamento);
         }
@@ -125,8 +129,8 @@ namespace SistemaEstetica.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["clienteID"] = new SelectList(_context.Clientes, "id", "cpf", agendamento.clienteID);
-            ViewData["funcionarioID"] = new SelectList(_context.Funcionarios, "id", "cpf", agendamento.funcionarioID);
+            ViewData["clienteID"] = new SelectList(_context.Clientes, "id", "nome", agendamento.clienteID);
+            ViewData["funcionarioID"] = new SelectList(_context.Funcionarios, "id", "nome", agendamento.funcionarioID);
             ViewData["servicoID"] = new SelectList(_context.Servicos, "id", "descricao", agendamento.servicoID);
             return View(agendamento);
         }
@@ -165,6 +169,10 @@ namespace SistemaEstetica.Controllers
             if (agendamento != null)
             {
                 _context.Agendamentos.Remove(agendamento);
+
+                //Movimentar a qtde de Horarios disponiveis aumentando em 1
+                Funcionario funcionario = await _context.Funcionarios.FindAsync(agendamento.funcionarioID);
+                funcionario.vagas = funcionario.vagas + 1;
             }
             
             await _context.SaveChangesAsync();

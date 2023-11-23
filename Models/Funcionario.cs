@@ -17,7 +17,7 @@ namespace SistemaEstetica2.Models
         public string nome { get; set; }
 
         [Required(ErrorMessage = "Campo Nascimento é obrigatório...")]
-        [DisplayFormat(DataFormatString = "{0:d}")]
+        [DataType(DataType.Date)]
         [Display(Name = "Nascimento")]
         public DateTime nascimento { get; set; }
 
@@ -37,8 +37,8 @@ namespace SistemaEstetica2.Models
         [Display(Name = "Email")]
         public string email { get; set; }
 
-        [Required(ErrorMessage = "Campo Vagas Disponíveis é obrigatório...")]
-        [Display(Name = "Vagas Disponíveis")]
+        [Required(ErrorMessage = "Campo Horários Disponíveis é obrigatório...")]
+        [Display(Name = "Qtde Horários Disponíveis")]
         public int vagas { get; set; }
     }
 }

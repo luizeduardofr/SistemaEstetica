@@ -8,7 +8,7 @@ using SistemaEstetica2.Models;
 
 #nullable disable
 
-namespace SistemaEstetica2.Migrations
+namespace SistemaEstetica.Migrations
 {
     [DbContext(typeof(Contexto))]
     partial class ContextoModelSnapshot : ModelSnapshot

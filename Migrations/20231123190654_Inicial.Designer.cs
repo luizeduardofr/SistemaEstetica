@@ -12,7 +12,7 @@ using SistemaEstetica2.Models;
 namespace SistemaEstetica.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20231123184949_Inicial")]
+    [Migration("20231123190654_Inicial")]
     partial class Inicial
     {
         /// <inheritdoc />

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SistemaEstetica2.Models;
 
-namespace SistemaEstetica2.Controllers
+namespace SistemaEstetica.Controllers
 {
     public class ClientesController : Controller
     {
@@ -21,9 +21,7 @@ namespace SistemaEstetica2.Controllers
         // GET: Clientes
         public async Task<IActionResult> Index()
         {
-              return _context.Clientes != null ? 
-                          View(await _context.Clientes.ToListAsync()) :
-                          Problem("Entity set 'Contexto.Clientes'  is null.");
+              return View(await _context.Clientes.ToListAsync());
         }
 
         // GET: Clientes/Details/5
@@ -156,7 +154,7 @@ namespace SistemaEstetica2.Controllers
 
         private bool ClienteExists(int id)
         {
-          return (_context.Clientes?.Any(e => e.id == id)).GetValueOrDefault();
+          return _context.Clientes.Any(e => e.id == id);
         }
     }
 }
