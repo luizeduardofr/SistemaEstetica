@@ -7,27 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Views\Clientes\**" />
-    <Content Remove="Views\Clientes\**" />
-    <EmbeddedResource Remove="Views\Clientes\**" />
-    <None Remove="Views\Clientes\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7.0.13" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.13" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="7.0.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.13" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.11" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Views\Clientes\Create.cshtml" />
-    <None Include="Views\Clientes\Delete.cshtml" />
-    <None Include="Views\Clientes\Details.cshtml" />
-    <None Include="Views\Clientes\Edit.cshtml" />
-    <None Include="Views\Clientes\Index.cshtml" />
   </ItemGroup>
 
 </Project>
