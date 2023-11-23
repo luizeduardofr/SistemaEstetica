@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SistemaEstetica2.Models;
 
-namespace SistemaEstetica2.Controllers
+namespace SistemaEstetica.Controllers
 {
     public class ServicosController : Controller
     {
@@ -21,9 +21,7 @@ namespace SistemaEstetica2.Controllers
         // GET: Servicos
         public async Task<IActionResult> Index()
         {
-              return _context.Servicos != null ? 
-                          View(await _context.Servicos.ToListAsync()) :
-                          Problem("Entity set 'Contexto.Servicos'  is null.");
+              return View(await _context.Servicos.ToListAsync());
         }
 
         // GET: Servicos/Details/5
@@ -55,7 +53,7 @@ namespace SistemaEstetica2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,descricao,preco,tempoMedio")] Servico servico)
+        public async Task<IActionResult> Create([Bind("id,descricao,preco")] Servico servico)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +85,7 @@ namespace SistemaEstetica2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,descricao,preco,tempoMedio")] Servico servico)
+        public async Task<IActionResult> Edit(int id, [Bind("id,descricao,preco")] Servico servico)
         {
             if (id != servico.id)
             {
@@ -156,7 +154,7 @@ namespace SistemaEstetica2.Controllers
 
         private bool ServicoExists(int id)
         {
-          return (_context.Servicos?.Any(e => e.id == id)).GetValueOrDefault();
+          return _context.Servicos.Any(e => e.id == id);
         }
     }
 }

@@ -32,9 +32,13 @@ namespace SistemaEstetica2.Models
         public string telefone { get; set; }
 
         [StringLength(40)]
-        [Required(ErrorMessage = "Campo Email é obrigatório")]
+        [Required(ErrorMessage = "Campo Email é obrigatório...")]
         [DataType(DataType.EmailAddress, ErrorMessage = "Email inválido")]
         [Display(Name = "Email")]
         public string email { get; set; }
+
+        [Required(ErrorMessage = "Campo Vagas Disponíveis é obrigatório...")]
+        [Display(Name = "Vagas Disponíveis")]
+        public int vagas { get; set; }
     }
 }

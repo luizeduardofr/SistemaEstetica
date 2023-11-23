@@ -11,18 +11,15 @@ namespace SistemaEstetica2.Models
         [Display(Name = "ID")]
         public int id { get; set; }
 
-        //[Required(ErrorMessage = "Campo Agendamento é obrigatório...")]
-        //[Display(Name = "Data")]
-        //public DateOnly reservaDia { get; set; }
+        [Required(ErrorMessage = "Campo Data é obrigatório...")]
+        [DataType(DataType.Date)]
+        [Display(Name = "Data")]
+        public DateTime reservaData { get; set; }
 
-        //[Required(ErrorMessage = "Campo Agendamento é obrigatório...")]
-        //[Display(Name = "Horário")]
-        //public TimeOnly reservaHorario { get; set; }
-
-        [Required(ErrorMessage = "Campo Agendamento é obrigatório.")]
-        [DataType(DataType.DateTime)]
-        [Display(Name = "Agendar Horário")]
-        public DateTime dataDisponivel { get; set; }
+        [Required(ErrorMessage = "Campo Horário é obrigatório...")]
+        [DataType(DataType.Time)]
+        [Display(Name = "Horário")]
+        public TimeSpan reservaHorario { get; set; }
 
         public int funcionarioID { get; set; }
         [ForeignKey("funcionarioID")]

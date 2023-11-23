@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SistemaEstetica2.Models;
 
-namespace SistemaEstetica2.Controllers
+namespace SistemaEstetica.Controllers
 {
     public class AgendamentosController : Controller
     {
@@ -60,7 +60,7 @@ namespace SistemaEstetica2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,dataDisponivel,funcionarioID,clienteID,servicoID")] Agendamento agendamento)
+        public async Task<IActionResult> Create([Bind("id,reservaData,reservaHorario,funcionarioID,clienteID,servicoID")] Agendamento agendamento)
         {
             if (ModelState.IsValid)
             {
@@ -98,7 +98,7 @@ namespace SistemaEstetica2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,dataDisponivel,funcionarioID,clienteID,servicoID")] Agendamento agendamento)
+        public async Task<IActionResult> Edit(int id, [Bind("id,reservaData,reservaHorario,funcionarioID,clienteID,servicoID")] Agendamento agendamento)
         {
             if (id != agendamento.id)
             {
@@ -173,7 +173,7 @@ namespace SistemaEstetica2.Controllers
 
         private bool AgendamentoExists(int id)
         {
-          return (_context.Agendamentos?.Any(e => e.id == id)).GetValueOrDefault();
+          return _context.Agendamentos.Any(e => e.id == id);
         }
     }
 }

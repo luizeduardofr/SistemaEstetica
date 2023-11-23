@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SistemaEstetica2.Models;
 
-namespace SistemaEstetica2.Controllers
+namespace SistemaEstetica.Controllers
 {
     public class FuncionariosController : Controller
     {
@@ -21,9 +21,7 @@ namespace SistemaEstetica2.Controllers
         // GET: Funcionarios
         public async Task<IActionResult> Index()
         {
-              return _context.Funcionarios != null ? 
-                          View(await _context.Funcionarios.ToListAsync()) :
-                          Problem("Entity set 'Contexto.Funcionarios'  is null.");
+              return View(await _context.Funcionarios.ToListAsync());
         }
 
         // GET: Funcionarios/Details/5
@@ -55,7 +53,7 @@ namespace SistemaEstetica2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,nome,nascimento,cpf,telefone,email")] Funcionario funcionario)
+        public async Task<IActionResult> Create([Bind("id,nome,nascimento,cpf,telefone,email,vagas")] Funcionario funcionario)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +85,7 @@ namespace SistemaEstetica2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,nome,nascimento,cpf,telefone,email")] Funcionario funcionario)
+        public async Task<IActionResult> Edit(int id, [Bind("id,nome,nascimento,cpf,telefone,email,vagas")] Funcionario funcionario)
         {
             if (id != funcionario.id)
             {
@@ -156,7 +154,7 @@ namespace SistemaEstetica2.Controllers
 
         private bool FuncionarioExists(int id)
         {
-          return (_context.Funcionarios?.Any(e => e.id == id)).GetValueOrDefault();
+          return _context.Funcionarios.Any(e => e.id == id);
         }
     }
 }

@@ -20,9 +20,5 @@ namespace SistemaEstetica2.Models
         [DisplayFormat(DataFormatString = "{0:C2}")]
         [Display(Name = "Preço")]
         public double preco { get; set; }
-
-        [Required(ErrorMessage = "Campo Tempo Médio é obrigatório...")]
-        [Display(Name = "Tempo de duração em minutos")]
-        public int tempoMedio { get; set; }
     }
 }

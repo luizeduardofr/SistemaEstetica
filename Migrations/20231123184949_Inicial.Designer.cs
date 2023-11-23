@@ -9,10 +9,10 @@ using SistemaEstetica2.Models;
 
 #nullable disable
 
-namespace SistemaEstetica2.Migrations
+namespace SistemaEstetica.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20231122215531_Inicial")]
+    [Migration("20231123184949_Inicial")]
     partial class Inicial
     {
         /// <inheritdoc />
@@ -36,11 +36,14 @@ namespace SistemaEstetica2.Migrations
                     b.Property<int>("clienteID")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("dataDisponivel")
-                        .HasColumnType("datetime2");
-
                     b.Property<int>("funcionarioID")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("reservaData")
+                        .HasColumnType("datetime2");
+
+                    b.Property<TimeSpan>("reservaHorario")
+                        .HasColumnType("time");
 
                     b.Property<int>("servicoID")
                         .HasColumnType("int");
@@ -120,6 +123,9 @@ namespace SistemaEstetica2.Migrations
                         .HasMaxLength(15)
                         .HasColumnType("nvarchar(15)");
 
+                    b.Property<int>("vagas")
+                        .HasColumnType("int");
+
                     b.HasKey("id");
 
                     b.ToTable("Funcionarios");
@@ -140,9 +146,6 @@ namespace SistemaEstetica2.Migrations
 
                     b.Property<double>("preco")
                         .HasColumnType("float");
-
-                    b.Property<int>("tempoMedio")
-                        .HasColumnType("int");
 
                     b.HasKey("id");
 
