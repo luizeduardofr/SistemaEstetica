@@ -62,6 +62,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/luize/OneDrive/Documents/Visual Studio 2022/SistemaEstetica/Views/Dados/Cliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFkb3NcQ2xpZW50ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luize/OneDrive/Documents/Visual Studio 2022/SistemaEstetica/Views/Dados/Funcionario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFkb3NcRnVuY2lvbmFyaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luize/OneDrive/Documents/Visual Studio 2022/SistemaEstetica/Views/Dados/Servico.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFkb3NcU2Vydmljby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/luize/OneDrive/Documents/Visual Studio 2022/SistemaEstetica/Views/Funcionarios/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnVuY2lvbmFyaW9zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

@@ -107,8 +107,8 @@ namespace SistemaEstetica.Migrations
                         .HasMaxLength(40)
                         .HasColumnType("nvarchar(40)");
 
-                    b.Property<DateTime>("nascimento")
-                        .HasColumnType("datetime2");
+                    b.Property<int>("nascimento")
+                        .HasColumnType("int");
 
                     b.Property<string>("nome")
                         .IsRequired()

@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h1>Excluir</h1>
@@ -48,7 +49,7 @@
             @Html.DisplayFor(model => model.vagas)
         </dd>
     </dl>
-    <br />
+    
     <form asp-action="Delete">
         <input type="hidden" asp-for="id" />
         <input type="submit" value="Excluir" class="btn btn-danger" /> |

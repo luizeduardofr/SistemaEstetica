@@ -34,7 +34,7 @@ namespace SistemaEstetica.Migrations
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     nome = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
-                    nascimento = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    nascimento = table.Column<int>(type: "int", nullable: false),
                     cpf = table.Column<string>(type: "nvarchar(14)", maxLength: 14, nullable: false),
                     telefone = table.Column<string>(type: "nvarchar(15)", maxLength: 15, nullable: false),
                     email = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),

@@ -1,23 +1,17 @@
-﻿@model IEnumerable<SistemaEstetica2.Models.Funcionario>
+﻿@model IEnumerable<SistemaEstetica2.Models.Cliente>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Cliente";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Lista de Funcionários</h1>
-<br>
-<a asp-action="Create"><input type="submit" value="Novo Funcionário" class="btn btn-primary bg-success border-0" /></a>
-<br>
+<h1>Clientes</h1>
 
 <table class="table">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.nascimento)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.cpf)
@@ -27,9 +21,6 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.vagas)
             </th>
             <th></th>
         </tr>
@@ -41,9 +32,6 @@
                 @Html.DisplayFor(modelItem => item.nome)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.nascimento)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.cpf)
             </td>
             <td>
@@ -51,9 +39,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.vagas)
             </td>
             <td>
                  <a asp-action="Edit" asp-route-id="@item.id"><input type="submit" value="Editar" class="btn btn-primary bg-warning text-dark border-0" /></a> |

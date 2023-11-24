@@ -12,7 +12,7 @@ using SistemaEstetica2.Models;
 namespace SistemaEstetica.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20231123190654_Inicial")]
+    [Migration("20231124132432_Inicial")]
     partial class Inicial
     {
         /// <inheritdoc />
@@ -110,8 +110,8 @@ namespace SistemaEstetica.Migrations
                         .HasMaxLength(40)
                         .HasColumnType("nvarchar(40)");
 
-                    b.Property<DateTime>("nascimento")
-                        .HasColumnType("datetime2");
+                    b.Property<int>("nascimento")
+                        .HasColumnType("int");
 
                     b.Property<string>("nome")
                         .IsRequired()

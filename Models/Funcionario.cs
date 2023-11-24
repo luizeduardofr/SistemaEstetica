@@ -16,10 +16,9 @@ namespace SistemaEstetica2.Models
         [Display(Name = "Nome")]
         public string nome { get; set; }
 
-        [Required(ErrorMessage = "Campo Nascimento é obrigatório...")]
-        [DataType(DataType.Date)]
-        [Display(Name = "Nascimento")]
-        public DateTime nascimento { get; set; }
+        [Required(ErrorMessage = "Campo Idade é obrigatório...")]
+        [Display(Name = "Idade")]
+        public int nascimento { get; set; }
 
         [StringLength(14)]
         [Required(ErrorMessage = "Campo CPF é obrigatório...")]
