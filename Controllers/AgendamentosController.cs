@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,7 @@ using SistemaEstetica2.Models;
 
 namespace SistemaEstetica.Controllers
 {
+    [Authorize]
     public class AgendamentosController : Controller
     {
         private readonly Contexto _context;
@@ -67,6 +69,7 @@ namespace SistemaEstetica.Controllers
                 //Movimentar a qtde de Horarios disponiveis diminuindo em 1
                 Funcionario funcionario = await _context.Funcionarios.FindAsync(agendamento.funcionarioID);
                 funcionario.vagas = funcionario.vagas - 1;
+
 
                 _context.Add(agendamento);
                 await _context.SaveChangesAsync();

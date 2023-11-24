@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SistemaEstetica")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16cc00df7195b6ae8bb5e8b34f2912eb42cd35a1")]
 [assembly: System.Reflection.AssemblyProductAttribute("SistemaEstetica")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SistemaEstetica")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -5,11 +5,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Servico</h1>
+<h1>Serviço</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
@@ -32,9 +29,9 @@
                 @Html.DisplayFor(modelItem => item.preco)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+                 <a asp-action="Edit" asp-route-id="@item.id"><input type="submit" value="Editar" class="btn btn-primary bg-warning text-dark border-0" /></a> |
+                 <a asp-action="Details" asp-route-id="@item.id"><input type="submit" value="Detalhar" class="btn btn-primary border-0" /></a> |
+                 <a asp-action="Delete" asp-route-id="@item.id"><input type="submit" value="Excluir" class="btn btn-primary bg-danger border-0" /></a>
             </td>
         </tr>
 }

@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SistemaEstetica2.Models;
 
 namespace SistemaEstetica.Controllers
 {
+    [Authorize]
     public class DadosController : Controller
     {
         private readonly Contexto contexto;
@@ -79,12 +81,13 @@ namespace SistemaEstetica.Controllers
             Random randNum = new Random();
 
             string[] vDescricao = { "Corte", "Luzes", "Unha Mão", "Unha Pé", "Cilios" };
+            string[] vDescricao2 = { "Progressiva", "Selagem", "Escova", "Tratamento Capilar", "Sobrancelha" };
 
             for (int i = 0; i < 10; i++)
             {
                 Servico servico = new Servico();
 
-                servico.descricao = vDescricao[randNum.Next() % 5];
+                servico.descricao = (i % 2 == 0) ? vDescricao[i / 2] : vDescricao2[i / 2];
                 servico.preco = randNum.Next(25, 200);
                 contexto.Servicos.Add(servico);
             }
